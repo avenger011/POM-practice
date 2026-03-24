@@ -7,12 +7,12 @@ import java.security.Key;
 import java.util.Properties;
 
 public class PropertyReader {
-    public static String readKey(String key)
-    {   Properties p;
-        String firdt_halfpat=System.getProperty("user.dir");
-        String file_path=firdt_halfpat+"/src/main/resources/data.properties";
+    public static String run(String key) {
+        Properties p;
+        String begurl = System.getProperty("user.div");
+        String url = begurl + "/src/main/resources/data.properties";
         try {
-            FileInputStream fileInputStream=new FileInputStream(file_path);
+            FileInputStream fileInputStream=new FileInputStream(url);
             p=new Properties();
             p.load(fileInputStream);
         } catch (FileNotFoundException e) {
@@ -20,7 +20,7 @@ public class PropertyReader {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        return p.getProperty(key);
+       return p.getProperty(key);
     }
 }
 

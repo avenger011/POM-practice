@@ -24,10 +24,10 @@ public class improvedTestCPOM {
         logger.info("browser startyed");
 
 
-        driver.get(PropertyReader.readKey("URL"));
+        driver.get(PropertyReader.run("URL"));
         logger.error("urlfailledd sgg");
         Loginpage loginpage=new Loginpage(driver);
-        loginpage.loginCorrectVIO(PropertyReader.readKey("user"),PropertyReader.readKey("pass"));
+        loginpage.loginCorrectVIO(PropertyReader.run("user"),PropertyReader.run("pass"));
 
         driverManage.Driverquit();
 

@@ -18,9 +18,10 @@ public class driverManage {
 
      public static void BrovserSelector()
     {
-        switch (PropertyReader.readKey("browser"))
+        switch (PropertyReader.run("browser"))
         {
             case "chrome":
+
                 driver=new ChromeDriver();
              break;
             case "edge":
